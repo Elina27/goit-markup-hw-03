@@ -197,6 +197,10 @@ h1 {
   display: flex;
   gap: 30px;
 }
+.advant-text {
+  width: 270px;
+}
+
 h2,
 h3 {
   color: var(--main-title-cl);
