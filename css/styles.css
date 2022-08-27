@@ -55,7 +55,6 @@ img {
 .header-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 .header-nav {
   display: flex;
@@ -75,18 +74,20 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+.contact-item:not(:last-child) {
+  margin-right: 50px;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* display: flex;
-  align-items: center; */
 
   /* outline: 2px solid red; */
 }
 .header {
   background-color: var(--main-bg-cl);
+  border-bottom: 1px solid #ececec;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -146,17 +147,10 @@ ul {
 .header-tel {
   color: var(--main-txt-cl);
 }
-.header-mail {
-  margin-right: 50px;
-}
-/* bg-section */
-
 .bg-section {
   background-color: var(--main-bg);
-}
-.bg-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
 }
 h1 {
@@ -182,37 +176,37 @@ h1 {
   cursor: pointer;
   width: 216px;
   min-height: 50px;
+  border: 0;
 }
 
-/* advant-section */
-.visually-hidden {
-  display: none;
-}
-.advant-container {
-  display: flex;
+/* advantages-section */
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.advant-list {
+.visually-hidden {
+  display: none;
+}
+.advantages-list {
   display: flex;
   gap: 30px;
 }
-.advant-text {
+.advantages-text {
   width: 270px;
 }
-
-h2,
-h3 {
+.title {
   color: var(--main-title-cl);
   font-weight: var(--main-font-weight700);
-}
-h2 {
   font-size: 36px;
   line-height: calc(42 / 32);
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
 h3 {
+  color: var(--main-title-cl);
+}
+.advantages-subtitle {
+  font-weight: var(--main-font-weight700);
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
@@ -221,13 +215,12 @@ h3 {
 }
 
 /* activity-section */
+.activity-section {
+  padding-top: 0;
+}
 .activity-section-title {
   margin-bottom: 50px;
   text-align: center;
-}
-.activity-container {
-  /* padding-top: 94px; */
-  padding-bottom: 94px;
 }
 .activity-list {
   display: flex;
@@ -236,8 +229,24 @@ h3 {
 .advant-text {
   width: 270px;
 }
-
-h4 {
+p {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+.team-section-title {
+  text-align: center;
+}
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+.teem-group {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.team-name {
   color: var(--main-title-cl);
   font-weight: var(--main-font-weight500);
   font-size: 16px;
@@ -245,33 +254,10 @@ h4 {
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
-p {
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-}
-
-/* team-section */
-.team-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  text-align: center;
-}
-.team-list {
-  display: flex;
-  gap: 30px;
-}
-.team-img {
-  margin-bottom: 30px;
-}
-.team-name {
-  margin-bottom: 10px;
-}
 .team-position {
   font-size: 16px;
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
 }
 .team-section {
   background-color: var(--main-bg-commands);
@@ -280,21 +266,18 @@ p {
 /* footer */
 .footer {
   background-color: var(--main-bg);
-}
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .footer-contact-list {
   margin-top: 20px;
 }
-
+.contact-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .footer-adress {
   color: var(--main-bg-cl);
   align-items: center;
-}
-.contact-item {
-  margin-bottom: 9px;
 }
 .footer-tel,
 .footer-mail {
@@ -322,10 +305,6 @@ p {
 
 /* portfolio */
 
-.project-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .project-button {
   display: flex;
   gap: 8px;
@@ -343,21 +322,22 @@ button {
   cursor: pointer;
   border-radius: 4px;
   padding: 6px 22px;
+  border: 0;
 }
 button:hover,
 button:focus {
   color: var(--main-bg-cl);
   background-color: var(--main-acsent-cl);
 }
-
 .project-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.project-img {
-  width: 370px;
-  margin-bottom: 20px;
+.project-group {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
 }
 .project-name {
   font-weight: 700;
@@ -365,8 +345,6 @@ button:focus {
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--main-title-cl);
-  width: 322px;
-  margin-left: 24px;
   margin-bottom: 4px;
 }
 .project-type {
@@ -375,7 +353,4 @@ button:focus {
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
   font-weight: 400;
-  width: 322px;
-  margin-left: 24px;
-  margin-bottom: 20px;
 }
