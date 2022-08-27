@@ -316,10 +316,10 @@ p {
 }
 
 /* portfolio */
-.project-section {
+/* .project-section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 .project-button {
   display: flex;
   gap: 8px;
